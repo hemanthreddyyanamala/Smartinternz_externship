@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Sales Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Walmart Sales Prediction</h2>
+        <form action="your_prediction_script.py" method="post">
+            <div class="form-group">
+                <label for="store">Store Number:</label>
+                <input type="number" id="store" name="store" required>
+            </div>
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <input type="number" id="size" name="size" required>
+            </div>
+            <div class="form-group">
+                <label for="temp">temperature:</label>
+                <input type="number" id="tempe" name="temp" required>
+            </div>
+            <div class="form-group">
+                <label for="dept">Department Number:</label>
+                <input type="number" id="dept" name="dept" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="holiday">Holiday:</label>
+                    <input type="radio" name="isHolidayRadio" value="0">No
+                    <input type="radio" name="isHolidayRadio" value="1">Yes
+            </div>
+            <input type="submit" value="Predict Sales">
+		 <h1>{{ output }}</h1>
+    <p>Store: {{ store }}</p>
+    <p>Department: {{ dept }}</p>
+    <p>Month: {{ month_name }}</p>
+    <p>Year: {{ year }}</p>
+    </div>
+</body>
+</html>
